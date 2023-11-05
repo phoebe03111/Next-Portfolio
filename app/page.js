@@ -1,7 +1,9 @@
+import Hero from "@/components/Hero";
+
 export default function Home() {
   return (
-    <>
-      <h1>Hello</h1>
-    </>
+    <main className="container mt-24 mx-auto px-12 py-4">
+      <Hero />
+    </main>
   );
 }

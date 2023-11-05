@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Navbar />
-        <main className="mt-24">{children}</main>
+        {children}
         <Footer />
       </body>
     </html>
