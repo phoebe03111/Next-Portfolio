@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col md:flex-row md:items-center md:py-16 text-center md:text-left">
+    <section className="flex flex-col md:flex-row md:items-center text-center md:text-left">
       {/* LEFT */}
       <div className="md:w-1/2 mb-8 md:mb-0">
         <h1 className="text-5xl lg:text-6xl leading-normal font-extrabold mb-4">
