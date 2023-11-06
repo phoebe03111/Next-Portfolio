@@ -10,7 +10,7 @@ const Hero = () => {
           Hi, I'm Phoebe
         </h1>
         <p className="text-lg lg:text-2xl">
-          A full-stack web developer based in Vancouver, Canada.
+          A full-stack developer based in Vancouver, Canada.
         </p>
         <a href="/Phoebe_Chang_Resume.pdf" download="Phoebe_Chang_Resume">
           <Button title="Download CV" />

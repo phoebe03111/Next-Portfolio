@@ -23,10 +23,10 @@ const About = () => {
         <Image src="/about.svg" alt='about image' width={500} height={500} />
 
         {/* RIGHT */}
-        <div className="mt-8 md:mt-0 flex flex-col h-full">
+        <div className="mt-8 md:mt-0 flex flex-col h-full flex-1 lg:pl-10">
           <h2 className="section-title">About Me</h2>
           <p className="text-base lg:text-lg leading-8">
-            I am a full stack web developer with a passion for creating
+            I am a full stack developer with a passion for creating
             interactive and responsive web applications. I have experience
             working with JavaScript, React, Redux, Node.js, Express, MySQL,
             MongoDB, HTML, CSS, and Git. I am a quick learner and I am always

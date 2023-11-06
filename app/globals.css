@@ -28,4 +28,8 @@
   .project-icon {
     @apply h-8 w-8 cursor-pointer text-gray-400 hover:text-white;
   }
+
+  .contact-form-input {
+    @apply border-2 border-secondary placeholder-gray-300 text-sm rounded-lg block w-full p-2.5 focus:outline-none;
+  }
 }
