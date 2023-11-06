@@ -33,3 +33,30 @@ export const ABOUT_DATA = [
     content: ["Teaching Assistant", "Full Stack Developer @Fickl Marketing"],
   },
 ];
+
+export const PROJECTS_DATA = [
+  {
+    id: 1,
+    title: "Bloom Express",
+    description: "Flower Delivery App",
+    image: "/projects/bloom-express.png",
+    gitUrl: "https://github.com/phoebe03111/Bloom-Express",
+    previewUrl: "https://bloom-express-eight.vercel.app/",
+  },
+  {
+    id: 2,
+    title: "BookSelf",
+    description: "BookSelf description",
+    image: "/projects/bookself.png",
+    gitUrl: "https://github.com/phoebe03111/bookself-v2",
+    previewUrl: "https://bookself.onrender.com/",
+  },
+  {
+    id: 3,
+    title: "The One With The Array Methods",
+    description: "The One With The Array Methods description",
+    image: "/projects/the-one-with-the-array-methods.png",
+    gitUrl: "https://github.com/phoebe03111/the-one-with-array-methods",
+    previewUrl: "https://the-one-with-the-array-methods.netlify.app/",
+  },
+];

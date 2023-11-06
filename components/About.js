@@ -18,13 +18,13 @@ const About = () => {
 
   return (
     <section id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+      <div className="flex flex-col lg:flex-row gap-8">
         {/* LEFT */}
-        <Image src="/about.svg" width={500} height={500} />
+        <Image src="/about.svg" alt='about image' width={500} height={500} />
 
         {/* RIGHT */}
         <div className="mt-8 md:mt-0 flex flex-col h-full">
-          <h2 className="text-4xl font-bold mb-4">About Me</h2>
+          <h2 className="section-title">About Me</h2>
           <p className="text-base lg:text-lg leading-8">
             I am a full stack web developer with a passion for creating
             interactive and responsive web applications. I have experience
@@ -57,7 +57,7 @@ const About = () => {
 
           <div className="mt-8">
             {ABOUT_DATA.find((data) => data.id === tab).content.map((item) => (
-              <ul>
+              <ul key={item.id}>
                 <li className="flex items-center gap-2 mb-2">
                   <CodeBracketIcon width={20} className="text-primary" /> {item}
                 </li>

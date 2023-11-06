@@ -9,11 +9,23 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 @layer utilities {
   .navbar-icon {
     @apply flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white;
+  }
+
+  .section-title {
+    @apply text-4xl font-bold mb-6;
+  }
+
+  .project-link {
+    @apply h-14 w-14 border-2 rounded-full border-gray-400 hover:border-white flex justify-center items-center;
+  }
+
+  .project-icon {
+    @apply h-8 w-8 cursor-pointer text-gray-400 hover:text-white;
   }
 }
