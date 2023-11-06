@@ -42,6 +42,7 @@ const Contact = () => {
             opportunities and conversations. Looking forward to hearing from
             you!
           </p>
+          <p className="text-primary underline">phoebe03111@gmail.com</p>
           <div className="flex items-center gap-2">
             <Link href="https://github.com/phoebe03111" target="_blank">
               <Image
@@ -68,11 +69,12 @@ const Contact = () => {
         {/* RIGHT */}
         <div className="md:flex-1">
           {emailSubmitted ? (
-            <p className="text-green-500">
-              Email sent successfully!
-            </p>
+            <p className="text-green-500">Email sent successfully!</p>
           ) : (
-            <form className="flex flex-col items-center gap-6" onSubmit={handleSubmit}>
+            <form
+              className="flex flex-col items-center gap-6"
+              onSubmit={handleSubmit}
+            >
               <div className="w-full">
                 <label
                   htmlFor="email"
