@@ -47,7 +47,7 @@ export const PROJECTS_DATA = [
     id: 2,
     title: "BookSelf",
     description: "BookSelf description",
-    image: "/projects/bookself.png",
+    image: "/projects/bookSelf.png",
     gitUrl: "https://github.com/phoebe03111/bookself-v2",
     previewUrl: "https://bookself.onrender.com/",
   },
