@@ -9,7 +9,7 @@ const Hero = () => {
         <h1 className="text-5xl lg:text-6xl leading-normal font-extrabold mb-4">
           Hi, I'm Phoebe
         </h1>
-        <p className="text-lg lg:text-2xl">
+        <p className="text-lg lg:text-2xl mb-4">
           A full-stack developer based in Vancouver, Canada.
         </p>
         <a href="/Phoebe_Chang_Resume.pdf" download="Phoebe_Chang_Resume">

@@ -11,10 +11,16 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 mx-auto z-10 bg-primary opacity-95">
+    <nav className="fixed top-0 left-0 right-0 mx-auto z-10 bg-primary">
       <div className="flex container flex-wrap items-center justify-between mx-auto px-4 py-2 lg:py-4">
         <Link href="/">
-          <Image src="/logo.png" alt="logo" width={60} height={60} className="rounded-full"/>
+          <Image
+            src="/logo.png"
+            alt="logo"
+            width={60}
+            height={60}
+            className="rounded-full"
+          />
         </Link>
 
         <div className="block md:hidden">

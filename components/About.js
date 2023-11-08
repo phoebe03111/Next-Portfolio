@@ -42,22 +42,22 @@ const About = () => {
               Skills
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
-            >
-              Education
-            </TabButton>
-            <TabButton
               selectTab={() => handleTabChange("experience")}
               active={tab === "experience"}
             >
               Experience
             </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("education")}
+              active={tab === "education"}
+            >
+              Education
+            </TabButton>
           </div>
 
           <div className="mt-8">
             {ABOUT_DATA.find((data) => data.id === tab).content.map((item) => (
-              <ul key={item.id}>
+              <ul key={item}>
                 <li className="flex items-center gap-2 mb-2">
                   <CodeBracketIcon width={20} className="text-primary" /> {item}
                 </li>
