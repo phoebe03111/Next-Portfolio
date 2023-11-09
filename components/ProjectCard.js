@@ -1,7 +1,14 @@
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 
-const ProjectCard = ({ title, description, imgUrl, gitUrl, previewUrl }) => {
+const ProjectCard = ({
+  title,
+  description,
+  techStack,
+  imgUrl,
+  gitUrl,
+  previewUrl,
+}) => {
   return (
     <article>
       {/* IMAGE */}
@@ -23,6 +30,11 @@ const ProjectCard = ({ title, description, imgUrl, gitUrl, previewUrl }) => {
       {/* TEXT */}
       <div className="rounded-b-xl mt-1  bg-secondary py-6 px-4">
         <h5 className="text-lg text-primary font-semibold mb-2">{title}</h5>
+        <p className="flex items-center gap-2 mb-2 text-sm">
+          {techStack.map((item) => (
+            <span key={item} className="border border-gray-400 rounded-lg px-2 py-1 text-gray-400">{item}</span>
+          ))}
+        </p>
         <p className="text-base">{description}</p>
       </div>
     </article>

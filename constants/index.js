@@ -46,8 +46,8 @@ export const PROJECTS_DATA = [
   {
     id: 1,
     title: "Bloom Express",
-    description:
-      "A responsive flower delivery application mockup. Made with Next.js, TypeScript, and Tailwind CSS..",
+    description: "A responsive flower delivery application mockup.",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
     image: "/projects/bloom-express.png",
     gitUrl: "https://github.com/phoebe03111/Bloom-Express",
     previewUrl: "https://bloom-express-eight.vercel.app/",
@@ -56,7 +56,8 @@ export const PROJECTS_DATA = [
     id: 2,
     title: "BookSelf",
     description:
-      "A full-stack web application designed to assist users in curating a virtual bookshelf and effectively monitoring their reading progress. Made with React, MUI, and MongoDB.",
+      "A full-stack web application designed to assist users in curating a virtual bookshelf and effectively monitoring their reading progress.",
+    techStack: ["React", "Express", "MUI", "MongoDB"],
     image: "/projects/bookSelf.png",
     gitUrl: "https://github.com/phoebe03111/bookself-v2",
     previewUrl: "https://bookself.onrender.com/",
@@ -65,7 +66,8 @@ export const PROJECTS_DATA = [
     id: 3,
     title: "The One With The Array Methods",
     description:
-      "A dynamic website designed to explore JavaScript array methods, featuring practical use cases and adorned with the playful charm of the Friends' theme. Made with React, Sass.",
+      "A dynamic website designed to explore JavaScript array methods, featuring practical use cases and adorned with the playful charm of the Friends' theme.",
+    techStack: ["React", "Sass"],
     image: "/projects/the-one-with-the-array-methods.png",
     gitUrl: "https://github.com/phoebe03111/the-one-with-array-methods",
     previewUrl: "https://the-one-with-the-array-methods.netlify.app/",
