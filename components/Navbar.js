@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import ThemeButton from "./ThemeButton";
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -39,7 +40,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:block md:w-auto" id="navbar">
-          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+          <ul className="flex p-4 md:p-0 md:flex-row items-center md:space-x-8 mt-0">
             {NAV_LINKS.map((link) => (
               <li key={link.key}>
                 <Link
@@ -50,6 +51,7 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
+            <ThemeButton />
           </ul>
         </div>
       </div>

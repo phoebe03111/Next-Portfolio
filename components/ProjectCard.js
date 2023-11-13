@@ -30,7 +30,7 @@ const ProjectCard = ({
       {/* TEXT */}
       <div className="rounded-b-xl mt-1  bg-secondary py-6 px-4">
         <h5 className="text-lg text-primary font-semibold mb-2">{title}</h5>
-        <p className="flex items-center gap-2 mb-2 text-sm">
+        <p className="flex items-center flex-wrap gap-2 mb-2 text-sm">
           {techStack.map((item) => (
             <span key={item} className="border border-gray-400 rounded-lg px-2 py-1 text-gray-400">{item}</span>
           ))}

@@ -46,7 +46,7 @@ export const PROJECTS_DATA = [
   {
     id: 1,
     title: "Bloom Express",
-    description: "A responsive flower delivery application mockup.",
+    description: "A flower delivery web application mockup with an elegant and responsive design ",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
     image: "/projects/bloom-express.png",
     gitUrl: "https://github.com/phoebe03111/Bloom-Express",
