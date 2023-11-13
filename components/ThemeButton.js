@@ -1,17 +1,28 @@
+'use client'
+
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 const ThemeButton = () => {
-  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false)
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
 
   return (
     <button
-      aria-label="Toggle Dark Mode"
       type="button"
       className="flex justify-center items-center"
-      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
-      {resolvedTheme === "dark" ? (
+      {theme === "dark" ? (
         <SunIcon color="white" width={25} />
       ) : (
         <MoonIcon color="white" width={25} />

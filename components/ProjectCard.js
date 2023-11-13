@@ -35,7 +35,7 @@ const ProjectCard = ({
             <span key={item} className="border border-gray-400 rounded-lg px-2 py-1 text-gray-400">{item}</span>
           ))}
         </p>
-        <p className="text-base">{description}</p>
+        <p className="text-base dark:text-black">{description}</p>
       </div>
     </article>
   );
