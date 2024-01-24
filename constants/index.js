@@ -45,15 +45,25 @@ export const ABOUT_DATA = [
 export const PROJECTS_DATA = [
   {
     id: 1,
+    title: "Enchanted Scents",
+    description: "An e-commerce full-stack web application.",
+    techStack: ["Next.js", "TypeScript", "Prisma", "MySQL", "Stripe", "Tailwind CSS"],
+    image: "/projects/enchanted.png",
+    gitUrl: "https://github.com/phoebe03111/enchanted",
+    previewUrl: "https://enchanted-seven.vercel.app",
+  },
+  {
+    id: 2,
     title: "Bloom Express",
-    description: "A flower delivery web application mockup with an elegant and responsive design ",
+    description:
+      "A flower delivery web application mockup with an elegant and responsive design ",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
     image: "/projects/bloom-express.png",
     gitUrl: "https://github.com/phoebe03111/Bloom-Express",
     previewUrl: "https://bloom-express-eight.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "BookSelf",
     description:
       "A full-stack web application designed to assist users in curating a virtual bookshelf and effectively monitoring their reading progress.",
@@ -63,7 +73,7 @@ export const PROJECTS_DATA = [
     previewUrl: "https://bookself.onrender.com/",
   },
   {
-    id: 3,
+    id: 4,
     title: "The One With The Array Methods",
     description:
       "A dynamic website designed to explore JavaScript array methods, featuring practical use cases and adorned with the playful charm of the Friends' theme.",
