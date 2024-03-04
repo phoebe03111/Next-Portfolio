@@ -26,12 +26,13 @@ const About = () => {
         <div className="mt-8 md:mt-0 flex flex-col h-full flex-1 lg:pl-10">
           <h2 className="section-title">About Me</h2>
           <p className="text-base lg:text-lg leading-8">
-            I am a full stack developer with a passion for transforming creative
-            ideas into functional and scalable web applications. I have
-            experience working with JavaScript, React, Next.js, Node.js, Redux,
-            Express, MySQL, MongoDB, Firebase, and Git. I am always looking to
-            expand my knowledge and skill set. I am eager to contribute my
-            expertise to dynamic and collaborative development teams.
+            I discovered a love for software engineering 3 years ago when I was
+            exploring new career paths after moving to Canada during Covid. I
+            joined a bootcamp as a student, transitioned into a role as a
+            teaching assistant, and later worked as a full-stack developer at a
+            startup for 1.5 years. With hands-on experience in building
+            real-world web applications, I am eager to pivot towards new
+            opportunities and thrive in a dynamic and collaborative environment.
           </p>
 
           <div className="mt-8">
