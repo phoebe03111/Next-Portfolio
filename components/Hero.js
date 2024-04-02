@@ -12,7 +12,7 @@ const Hero = () => {
         <p className="text-lg lg:text-2xl mb-4">
           A full-stack developer based in Vancouver, Canada.
         </p>
-        <a href="/Phoebe-Chang_Resume.pdf" download="Phoebe-Chang-Resume">
+        <a href="/Phoebe_Chang_Resume.pdf" download="Phoebe_Chang_Resume">
           <Button title="Download CV" />
         </a>
       </div>
