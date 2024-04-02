@@ -30,7 +30,7 @@ const About = () => {
             exploring new career paths after moving to Canada during Covid. I
             joined a bootcamp as a student, transitioned into a role as a
             teaching assistant, and later worked as a full-stack developer at a
-            startup for 1.5 years. With hands-on experience in building
+            marketing startup. With hands-on experience in building
             real-world web applications, I am eager to pivot towards new
             opportunities and thrive in a dynamic and collaborative environment.
           </p>
