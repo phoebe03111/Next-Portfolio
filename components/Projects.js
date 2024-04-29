@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import { PROJECTS_DATA } from "@/constants";
 
@@ -9,19 +9,19 @@ const Projects = () => {
     <section id="projects">
       <h2 className="section-title">My Projects</h2>
 
-      <ul className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <motion.ul
+        className="grid md:grid-cols-3 gap-8 md:gap-12"
+        variants={{
+          hidden: { opacity: 0 },
+          show: { opacity: 1, transition: { staggerChildren: 0.25 } },
+        }}
+        initial="hidden"
+        animate="show"
+      >
         {PROJECTS_DATA.map((project) => (
-          <ProjectCard
-            key={project.id}
-            title={project.title}
-            description={project.description}
-            techStack={project.techStack}
-            imgUrl={project.image}
-            gitUrl={project.gitUrl}
-            previewUrl={project.previewUrl}
-          />
+          <ProjectCard key={project.id} {...project} />
         ))}
-      </ul>
+      </motion.ul>
     </section>
   );
 };
