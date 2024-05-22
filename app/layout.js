@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Providers } from "./Providers";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "Phoebe Chang | Web Developer",
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           {children}
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
