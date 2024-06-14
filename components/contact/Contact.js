@@ -4,52 +4,64 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "../ui/button";
+import { SectionHeader } from "../section-header";
+import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
+import { Mail } from "lucide-react";
 
 const Contact = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const data = {
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
-    };
+    try {
+      setLoading(true);
 
-    const options = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    };
+      const data = {
+        email: e.target.email.value,
+        subject: e.target.subject.value,
+        message: e.target.message.value,
+      };
 
-    const response = await fetch("/api/send", options);
+      const options = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      };
 
-    if (response.status === 200) {
-      setEmailSubmitted(true);
+      const response = await fetch("/api/send", options);
+
+      if (response.status === 200) {
+        setEmailSubmitted(true);
+      }
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <section id="contact">
-      <div className="flex flex-col lg:flex-row gap-8">
+    <section id="contact" className="pb-8">
+      <SectionHeader title="Contact" />
+
+      <div className="flex flex-col md:flex-row w-full gap-12 md:gap-20">
         {/* LEFT */}
-        <div className="flex flex-col gap-4 md:w-1/2 md:pr-10">
-          <h3 className="text-2xl font-bold">Let's Connect</h3>
-          <p className="text-base leading-8">
-            Feel free to reach out - Whether you have a project in mind, want to
-            collaborate, or just want to say hello. I'm always open to new
-            opportunities and conversations. Looking forward to hearing from
-            you!
+        <div className="flex flex-col items-center justify-center gap-6">
+          <Image src="/contact.svg" alt="Contact" width={250} height={250} />
+          <p className="flex items-center gap-2 text-zinc-600">
+            <Mail className="text-primary" />
+            phoebe03111@gmail.com
           </p>
-          <p className="text-primary underline">phoebe03111@gmail.com</p>
           <div className="flex items-center gap-2">
             <Link href="https://github.com/phoebe03111" target="_blank">
               <Image
                 src="/icons/github.svg"
                 alt="github"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
               />
             </Link>
             <Link
@@ -59,70 +71,69 @@ const Contact = () => {
               <Image
                 src="/icons/linkedin.svg"
                 alt="linkedin"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
               />
             </Link>
           </div>
         </div>
 
         {/* RIGHT */}
-        <div className="md:flex-1">
+        <div className="flex-1">
           {emailSubmitted ? (
-            <p className="text-green-500">Email sent successfully!</p>
+            <p className="text-green-500">Thank you for the message!</p>
           ) : (
             <form
-              className="flex flex-col items-center gap-6"
+              className="flex flex-col items-center gap-4"
               onSubmit={handleSubmit}
             >
               <div className="w-full">
                 <label
                   htmlFor="email"
-                  className="block mb-2 text-sm font-medium"
+                  className="block text-sm mb-1 font-medium"
                 >
                   Your email
                 </label>
-                <input
+                <Input
                   name="email"
                   type="email"
                   id="email"
                   required
-                  className="contact-form-input"
-                  placeholder="jacob@google.com"
+                  placeholder="johndoe@google.com"
                 />
               </div>
               <div className="w-full">
                 <label
                   htmlFor="subject"
-                  className="block text-sm mb-2 font-medium"
+                  className="block text-sm mb-1 font-medium"
                 >
                   Subject
                 </label>
-                <input
+                <Input
                   name="subject"
                   type="text"
                   id="subject"
                   required
-                  className="contact-form-input"
                   placeholder="Hello!"
                 />
               </div>
               <div className="w-full">
                 <label
                   htmlFor="message"
-                  className="block text-sm mb-2 font-medium"
+                  className="block text-sm mb-1 font-medium"
                 >
                   Message
                 </label>
-                <textarea
+                <Textarea
                   name="message"
                   id="message"
-                  className="contact-form-input"
                   placeholder="Let's talk about..."
                   rows={5}
                 />
               </div>
-              <Button type="submit">Send Message</Button>
+              <Button type="submit" disabled={loading}>
+                {loading ? "Sending..." : "Send Message"}
+              </Button>
             </form>
           )}
         </div>
