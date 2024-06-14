@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import Button from "./Button";
+import { Button } from "./ui/button";
 
 const Contact = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -122,7 +122,7 @@ const Contact = () => {
                   rows={5}
                 />
               </div>
-              <Button type="submit" title="Send Message" />
+              <Button type="submit">Send Message</Button>
             </form>
           )}
         </div>

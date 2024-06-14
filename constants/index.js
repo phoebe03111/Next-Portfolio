@@ -47,7 +47,7 @@ export const PROJECTS_DATA = [
     id: 1,
     title: "Enchanted Scents",
     description: "An e-commerce full-stack web application.",
-    techStack: ["Next.js", "TypeScript", "Prisma", "MySQL", "Stripe", "Tailwind CSS"],
+    techStack: ["Next.js", "TypeScript", "Prisma", "Neon", "PostgreSQL", "Stripe", "Tailwind CSS"],
     image: "/projects/enchanted.png",
     gitUrl: "https://github.com/phoebe03111/enchanted",
     previewUrl: "https://enchanted-seven.vercel.app",

@@ -1,7 +1,7 @@
-import Navbar from "@/components/Navbar";
-import "./globals.css";
-import { Providers } from "./Providers";
 import { Analytics } from "@vercel/analytics/react";
+import Navbar from "@/components/Navbar";
+import { ThemeProvider } from "@/components/theme-provider";
+import "./globals.css";
 
 export const metadata = {
   title: "Phoebe Chang | Web Developer",
@@ -12,10 +12,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
-        <Providers>
+        <ThemeProvider attribute="class" defaultTheme="system">
           <Navbar />
           {children}
-        </Providers>
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>

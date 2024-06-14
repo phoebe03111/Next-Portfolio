@@ -1,32 +1,38 @@
 import Image from "next/image";
-import Button from "./Button";
+import SectionContainer from "./SectionContainer";
+import DownloadCVBtn from "./DownloadCVBtn";
+import Reveal from "./Reveal";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col md:flex-row md:items-center text-center md:text-left">
+    <SectionContainer>
       {/* LEFT */}
-      <div className="md:w-1/2 mb-8 md:mb-0">
-        <h1 className="text-5xl lg:text-6xl leading-normal font-extrabold mb-4">
-          Hi, I'm Phoebe
-        </h1>
-        <p className="text-lg lg:text-2xl mb-4">
-          A full-stack developer based in Vancouver, Canada.
-        </p>
-        <a href="/Phoebe_Chang_Resume.pdf" download="Phoebe_Chang_Resume">
-          <Button title="Download CV" />
-        </a>
+      <div className="order-2 md:order-1 flex flex-col justify-center items-center md:items-start text-center md:text-left gap-4">
+        <Reveal>
+          <h1 className="text-5xl lg:text-7xl leading-normal font-extrabold md:mb-3">
+            Hi, I'm Phoebe
+          </h1>
+          <p className="text-lg lg:text-xl">
+            A full-stack developer based in Vancouver, Canada.
+          </p>
+        </Reveal>
+        <Reveal>
+          <DownloadCVBtn />
+        </Reveal>
       </div>
 
       {/* RIGHT */}
-      <div className="flex justify-center items-center md:w-1/2">
-        <Image
-          src="/web_developer.svg"
-          alt="hero image"
-          width={300}
-          height={300}
-        />
+      <div className="order-1 md:order-2 flex justify-center items-center">
+        <Reveal delay={0.5}>
+          <Image
+            src="/web_developer.svg"
+            alt="hero image"
+            width={350}
+            height={350}
+          />
+        </Reveal>
       </div>
-    </section>
+    </SectionContainer>
   );
 };
 
