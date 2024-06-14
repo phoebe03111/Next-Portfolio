@@ -1,12 +1,10 @@
 import Image from "next/image";
-import SectionContainer from "../section-container";
 import DownloadCVBtn from "../download-CV-btn";
 import Reveal from "../Reveal";
-import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
-    <SectionContainer>
+    <section className="h-[80vh] flex flex-col justify-center space-y-4 md:space-y-0 md:flex-row md:justify-between items-center">
       {/* LEFT */}
       <div className="order-2 md:order-1 flex flex-col justify-center items-center md:items-start text-center md:text-left gap-6">
         <Reveal>
@@ -26,14 +24,14 @@ const Hero = () => {
       <div className="order-1 md:order-2 flex justify-center items-center">
         <Reveal delay={0.5}>
           <Image
-            src="/web_developer.svg"
+            src="/programmer.svg"
             alt="hero image"
             width={350}
             height={350}
           />
         </Reveal>
       </div>
-    </SectionContainer>
+    </section>
   );
 };
 

@@ -1,27 +1,17 @@
-"use client";
-
-import { motion } from "framer-motion";
-import ProjectCard from "./ProjectCard";
 import { PROJECTS_DATA } from "@/constants";
+import { SectionHeader } from "../section-header";
+import { Project } from "./Project";
 
 const Projects = () => {
   return (
     <section id="projects">
-      <h2 className="section-title">My Projects</h2>
+      <SectionHeader title="Projects" />
 
-      <motion.ul
-        className="grid md:grid-cols-3 gap-8 md:gap-12"
-        variants={{
-          hidden: { opacity: 0 },
-          show: { opacity: 1, transition: { staggerChildren: 0.25 } },
-        }}
-        initial="hidden"
-        animate="show"
-      >
-        {PROJECTS_DATA.map((project) => (
-          <ProjectCard key={project.id} {...project} />
-        ))}
-      </motion.ul>
+      <div className="grid gap-12 grid-cols-1 md:grid-cols-2">
+        {PROJECTS_DATA.map((project) => {
+          return <Project key={project.title} {...project} />;
+        })}
+      </div>
     </section>
   );
 };

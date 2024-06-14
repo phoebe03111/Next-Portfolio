@@ -4,7 +4,7 @@ import { Skills } from "./Skills";
 
 export const About = () => {
   return (
-    <section id="about" className="section-wrapper">
+    <section id="about">
       <SectionHeader title="About" />
       <div className="grid grid-cols-1 md:grid-cols-[1fr_300px] gap-8">
         <div className="space-y-4 text-lg">
