@@ -17,7 +17,7 @@ const Navbar = () => {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-end gap-6 md:flex">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.label}
