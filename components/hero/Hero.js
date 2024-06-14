@@ -1,13 +1,14 @@
 import Image from "next/image";
-import SectionContainer from "./SectionContainer";
-import DownloadCVBtn from "./DownloadCVBtn";
-import Reveal from "./Reveal";
+import SectionContainer from "../section-container";
+import DownloadCVBtn from "../download-CV-btn";
+import Reveal from "../Reveal";
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
     <SectionContainer>
       {/* LEFT */}
-      <div className="order-2 md:order-1 flex flex-col justify-center items-center md:items-start text-center md:text-left gap-4">
+      <div className="order-2 md:order-1 flex flex-col justify-center items-center md:items-start text-center md:text-left gap-6">
         <Reveal>
           <h1 className="text-5xl lg:text-7xl leading-normal font-extrabold md:mb-3">
             Hi, I'm Phoebe
