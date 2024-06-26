@@ -28,6 +28,7 @@ const Hero = () => {
             alt="hero image"
             width={350}
             height={350}
+            priority={true}
           />
         </Reveal>
       </div>

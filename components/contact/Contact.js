@@ -2,17 +2,24 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 import { SectionHeader } from "../section-header";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
-import { Mail } from "lucide-react";
+import { Check, Copy } from "lucide-react";
 import Reveal from "../Reveal";
 
 const Contact = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [copiedEmail, setCopiedEmail] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCopiedEmail(false);
+    }, 3000);
+  }, [copiedEmail]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -50,12 +57,22 @@ const Contact = () => {
 
       <div className="flex flex-col md:flex-row w-full gap-12 md:gap-20">
         {/* LEFT */}
-        <Reveal>
-          <div className="flex flex-col items-center justify-center gap-6">
+        <Reveal width="w-full md:w-fit">
+          <div className="flex flex-col justify-center items-center gap-5">
             <Image src="/contact.svg" alt="Contact" width={250} height={250} />
-            <p className="flex items-center gap-2 text-zinc-600">
-              <Mail className="text-primary" />
+            <p
+              className="flex items-center gap-2 text-zinc-600 cursor-pointer hover:underline"
+              onClick={() => {
+                navigator.clipboard.writeText("phoebe03111@gmail.com");
+                setCopiedEmail(true);
+              }}
+            >
               phoebe03111@gmail.com
+              {copiedEmail ? (
+                <Check className="text-primary" size={18} />
+              ) : (
+                <Copy className="text-primary" size={18} />
+              )}
             </p>
             <div className="flex items-center gap-2">
               <Link href="https://github.com/phoebe03111" target="_blank">
