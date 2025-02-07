@@ -7,7 +7,7 @@ const DownloadCVBtn = () => {
     <Button
       variant="outline"
       className="text-lg text-primary border-primary hover:bg-primary hover:shadow-xl hover:text-white"
-      onClick={() => window.open("/Phoebe_Chang_Resume.pdf")}
+      onClick={() => window.open("/Phoebe-Chang-Resume.pdf")}
     >
       Download CV
     </Button>
